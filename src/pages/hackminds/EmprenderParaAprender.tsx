@@ -224,7 +224,7 @@ const EmprenderParaAprender = () => {
                         <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="space-y-6 md:space-y-8 text-center lg:text-left">
                             <div className="inline-block p-3 rounded-2xl bg-blue-50 text-blue-600 mb-2"><Sparkles className="w-6 h-6 md:w-8 md:h-8" /></div>
                             <h2 className="text-3xl md:text-6xl font-black text-[#2D2B7A] leading-tight">En Guanajuato ya existe <span className="text-blue-500 italic">talento brillante</span>.</h2>
-                            <p className="text-lg md:text-2xl text-slate-600 leading-relaxed font-medium">"Pero faltan rutas claras, acompañamiento, redes y puentes hacia programas globales."</p>
+                            <p className="text-lg md:text-2xl text-slate-600 leading-relaxed font-medium">"Pero faltan rutas claras, acompañamiento, redes y puentes hacia programas globales. Es momento de transformar el potencial en acción."</p>
                         </motion.div>
                         <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="relative rounded-[2.5rem] md:rounded-[3rem] bg-gradient-to-br from-blue-100 to-white shadow-inner flex items-center justify-center overflow-hidden p-6 md:p-12">
                             <div className="grid grid-cols-2 gap-4 md:gap-8 relative z-10 w-full">
@@ -268,7 +268,7 @@ const EmprenderParaAprender = () => {
                     <div className="max-w-4xl mx-auto text-center mb-10 md:mb-16 space-y-4 md:space-y-6">
                         <motion.span className="text-blue-600 font-black text-xs md:text-sm uppercase tracking-[0.4em]">C - Cambio</motion.span>
                         <h2 className="text-3xl md:text-6xl font-black text-[#2D2B7A]">{language === "es" ? "¿Qué es el Community Day?" : "What is Community Day?"}</h2>
-                        <p className="text-lg md:text-xl text-slate-600 font-medium px-2">Un espacio para aprender lo que no se enseña en el aula.</p>
+                        <p className="text-lg md:text-xl text-slate-600 font-medium px-2">Un espacio donde aprendes lo que la escuela no enseña.</p>
                     </div>
                     <div className="relative bg-[#F8F9FC] rounded-[2rem] md:rounded-[3rem] p-6 md:p-12 shadow-xl border border-white mb-10 md:mb-16 overflow-hidden">
                         <div className="absolute top-0 right-0 p-8 opacity-5 hidden lg:block">
@@ -278,9 +278,9 @@ const EmprenderParaAprender = () => {
                             <div className="space-y-4 md:space-y-6">
                                 <ul className="space-y-3 md:space-y-4">
                                     {[
-                                        { es: "Cómo pensar como emprendedor.", en: "How to think like an entrepreneur.", icon: Brain },
-                                        { es: "Cómo convertir problemas en proyectos.", en: "How to turn problems into projects.", icon: Rocket },
-                                        { es: "Cómo vender tus ideas.", en: "How to sell your ideas.", icon: Handshake }
+                                        { es: "Cómo pensar como emprendedor y detectar oportunidades.", en: "How to think like an entrepreneur and spot opportunities.", icon: Brain },
+                                        { es: "Cómo convertir problemas reales en proyectos viables con metodologías ágiles.", en: "How to turn real problems into viable projects with agile methodologies.", icon: Rocket },
+                                        { es: "Cómo conectar y vender tus ideas a aliados clave.", en: "How to connect and sell your ideas to key allies.", icon: Handshake }
                                     ].map((item, i) => (
                                         <motion.li
                                             key={i}
@@ -299,10 +299,10 @@ const EmprenderParaAprender = () => {
                             </div>
                             <div className="grid grid-cols-2 gap-4 md:gap-6">
                                 {[
-                                    { val: "+4", lbl: t("Horas", "Hours", language), icon: Clock },
-                                    { val: "2", lbl: t("Speakers", "Speakers", language), icon: Mic },
-                                    { val: "2", lbl: t("Talleres", "Workshops", language), icon: Brain },
-                                    { val: "100%", lbl: t("Networking", "Networking", language), icon: Handshake }
+                                    { val: "+4", lbl: t("Horas Intensivas", "Intensive Hours", language), icon: Clock },
+                                    { val: "2", lbl: t("Speakers Principales", "Keynote Speakers", language), icon: Mic },
+                                    { val: "2", lbl: t("Talleres Especializados", "Specialized Workshops", language), icon: Brain },
+                                    { val: "100%", lbl: t("Networking Directo", "Direct Networking", language), icon: Handshake }
                                 ].map((s, i) => (
                                     <AnimatedCounter key={i} value={s.val} label={s.lbl} icon={s.icon} />
                                 ))}
@@ -329,7 +329,7 @@ const EmprenderParaAprender = () => {
                             </motion.div>
                         ))}
                         <div className="flex justify-center mt-8">
-                            <Button variant="outline" className="rounded-full border-[#2D2B7A] text-[#2D2B7A] hover:bg-slate-100 text-sm md:text-base px-6 py-3">{language === "es" ? "Descargar Agenda" : "Download Agenda"} <Download className="ml-2 w-4 h-4" /></Button>
+                            <Button variant="outline" className="rounded-full border-[#2D2B7A] text-[#2D2B7A] hover:bg-slate-100 text-sm md:text-base px-6 py-3">{language === "es" ? "Descargar Agenda Completa" : "Download Full Agenda"} <Download className="ml-2 w-4 h-4" /></Button>
                         </div>
                     </div>
                 </div>
@@ -346,10 +346,11 @@ const EmprenderParaAprender = () => {
                             </div>
                             <h2 className="text-3xl md:text-7xl font-black italic text-[#2D2B7A] leading-tight px-2">{language === "es" ? "Lleva tu talento al mundo" : "Take your talent to the world"}</h2>
                             <div className="space-y-4 md:space-y-6 text-base md:text-xl text-slate-600 leading-relaxed font-medium">
-                                <p>{language === "es" ? "TrepCamp es la academia internacional para formar jóvenes lideres." : "TrepCamp is the international academy for young leaders."}</p>
+                                <p>{language === "es" ? "TrepCamp es la academia internacional número uno que forma a jóvenes líderes para crear startups de alto impacto." : "TrepCamp is the number one international academy that trains young leaders to create high-impact startups."}</p>
+                                <p>{language === "es" ? "En el Community Day, descubrirás cómo aplicar a becas completas para vivir experiencias inmersivas en los ecosistemas más innovadores del planeta." : "At Community Day, you'll discover how to apply for full scholarships to live immersive experiences in the planet's most innovative ecosystems."}</p>
                             </div>
                             <div className="flex flex-wrap justify-center lg:justify-start gap-3">
-                                {["Madrid", "NY", "9 Días"].map((tag, i) => (
+                                {["Madrid", "Nueva York", "9 Días", "15k+ Egresados"].map((tag, i) => (
                                     <span key={i} className="px-4 py-2 md:px-6 md:py-3 rounded-xl md:rounded-2xl bg-white text-[#4F1675] font-black text-xs md:text-sm uppercase shadow-sm border border-purple-100 flex items-center gap-2">
                                         <Award className="w-3 h-3 md:w-4 md:h-4 text-[#00AEEF]" /> {tag}
                                     </span>
@@ -373,13 +374,13 @@ const EmprenderParaAprender = () => {
                         <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} className="text-yellow-400 font-bold tracking-widest uppercase text-xs md:text-sm">{t("EL CAMINO DEL PARTICIPANTE", "PARTICIPANT JOURNEY", language)}</motion.span>
                         <h2 className="text-3xl md:text-6xl font-black mt-2 leading-tight">{t("Rutas HackMinds 2026", "2026 HackMinds Routes", language)}</h2>
                         <p className="text-lg md:text-xl text-slate-400 mt-4 max-w-3xl mx-auto px-2">
-                            {t("El Community Day es solo el inicio.", "Community Day is just the beginning.", language)}
+                            {t("El Community Day es solo el inicio. Al terminar, podrás elegir una o varias rutas para seguir escalando tu proyecto.", "Community Day is just the beginning. Upon completion, you can choose one or more routes to keep scaling your project.", language)}
                         </p>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12 md:20">
                         {[
                             { t: t("Emprendimiento", "Entrepreneurship", language), s: t("& Edu. Financiera", "& Financial Edu.", language), icon: DollarSign, color: "from-blue-500 to-cyan-500" },
-                            { t: t("Tecnología", "Technology", language), s: t("& IA Impacto", "& Impact AI", language), icon: Code, color: "from-purple-500 to-pink-500" },
+                            { t: t("Tecnología", "Technology", language), s: t("& IA de Impacto", "& Impact AI", language), icon: Code, color: "from-purple-500 to-pink-500" },
                             { t: t("Liderazgo", "Leadership", language), s: t("Transformador", "Transformative", language), icon: Users, color: "from-amber-500 to-orange-500" },
                             { t: t("Sostenibilidad", "Sustainability", language), s: t("& Climatech", "& Climatech", language), icon: Globe, color: "from-green-500 to-emerald-500" }
                         ].map((r, i) => (
@@ -406,10 +407,10 @@ const EmprenderParaAprender = () => {
 
                             {[
                                 { t: t("Asistes", "Attend", language), sub: "Community Day", icon: Calendar },
-                                { t: t("Diseñas", "Design", language), sub: "Modelo", icon: Sparkles },
-                                { t: t("Te Unes", "Join", language), sub: "Ruta", icon: ArrowRight },
-                                { t: t("Aplicas", "Apply", language), sub: "Becas", icon: Rocket },
-                                { t: t("Escalas", "Scale", language), sub: "Impacto", icon: Globe }
+                                { t: t("Diseñas", "Design", language), sub: "Modelo Impacto", icon: Sparkles },
+                                { t: t("Te Unes", "Join", language), sub: "Ruta HackMinds", icon: ArrowRight },
+                                { t: t("Aplicas", "Apply", language), sub: "YES26 / TrepCamp", icon: Rocket },
+                                { t: t("Escalas", "Scale", language), sub: "Impacto Global", icon: Globe }
                             ].map((step, i) => (
                                 <motion.div
                                     key={i}
@@ -440,7 +441,7 @@ const EmprenderParaAprender = () => {
                         <h2 className="text-4xl md:text-8xl font-black text-[#2D2B7A]">Puentes Concretos</h2>
                     </div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12">
-                        {[{ icon: Sparkles, title: "Inspiración", desc: "No solo teoría: cómo iniciar, validar y aplicar." }, { icon: Home, title: "Comunidad", desc: "Conecta en Casa de Emprendimiento Irapuato." }, { icon: Rocket, title: "Acompañamiento", desc: "Continuamos después del evento con mentorías." }].map((item, i) => (
+                        {[{ icon: Sparkles, title: "Inspiración Práctica", desc: "No solo teoría: cómo iniciar, validar y aplicar a convocatorias." }, { icon: Home, title: "Comunidad Local", desc: "Conecta en Casa de Emprendimiento Irapuato, articulada con gobierno y universidades." }, { icon: Rocket, title: "Ruta de Acompañamiento", desc: "Continuamos después del evento con talleres, mentorías e ideathons constantes." }].map((item, i) => (
                             <motion.div key={i} whileHover={{ scale: 1.05 }} className="p-8 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] bg-gradient-to-br from-purple-50 to-white border border-purple-100 shadow-xl flex flex-col items-center text-center gap-6 md:gap-8 overflow-hidden">
                                 <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl md:rounded-3xl bg-white shadow-lg flex items-center justify-center text-purple-600 flex-shrink-0"><item.icon className="w-8 h-8 md:w-10 md:h-10" /></div>
                                 <div className="space-y-3 md:space-y-4"><h3 className="text-xl md:text-2xl font-black text-[#2D2B7A]">{item.title}</h3><p className="text-sm md:text-base text-slate-500 font-medium leading-relaxed">{item.desc}</p></div>
@@ -454,7 +455,7 @@ const EmprenderParaAprender = () => {
                 <div className="container px-4">
                     <div className="text-center mb-10 md:mb-16">
                         <h2 className="text-3xl md:text-5xl font-black text-[#2D2B7A] mb-4">{t("Mentores y Speakers", "Mentors & Speakers", language)}</h2>
-                        <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto px-2">{t("Construyendo el futuro del emprendimiento.", "Building the future of entrepreneurship.", language)}</p>
+                        <p className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto px-2">{t("Aprende de quienes están construyendo el futuro del emprendimiento en México.", "Learn from those building the future of entrepreneurship in Mexico.", language)}</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                         {speakers.map((s, i) => (
@@ -492,7 +493,7 @@ const EmprenderParaAprender = () => {
                                 <Users className="w-8 h-8 md:w-10 md:h-10 opacity-30" />
                             </div>
                             <h3 className="font-bold text-base md:text-lg">{t("Próximamente", "Coming Soon", language)}</h3>
-                            <p className="text-xs mt-2">{t("Más mentores invitados.", "More guest mentors.", language)}</p>
+                            <p className="text-xs mt-2">{t("Más mentores invitados y evaluadores expertos de la red local.", "More guest mentors and expert evaluators from the local network.", language)}</p>
                         </motion.div>
                     </div>
                 </div>
@@ -507,8 +508,8 @@ const EmprenderParaAprender = () => {
                             <div className="inline-block p-3 md:p-4 rounded-2xl md:rounded-3xl bg-white/10 text-[#00AEEF] relative z-10"><ScrollText className="w-8 h-8 md:w-10 md:h-10" /></div>
                             <h2 className="text-3xl md:text-4xl font-black relative z-10">E - Evidencia</h2>
                             <ul className="space-y-4 md:space-y-6 text-base md:text-xl opacity-90 font-medium relative z-10">
-                                <li className="flex items-start gap-3"><div className="mt-2 w-1.5 h-1.5 rounded-full bg-[#00AEEF] flex-shrink-0"></div><span>Metodologías probadas a nivel global.</span></li>
-                                <li className="flex items-start gap-3"><div className="mt-2 w-1.5 h-1.5 rounded-full bg-[#00AEEF] flex-shrink-0"></div><span>+15,000 emprendedores guiados.</span></li>
+                                <li className="flex items-start gap-3"><div className="mt-2 w-1.5 h-1.5 rounded-full bg-[#00AEEF] flex-shrink-0"></div><span>Metodologías probadas: design thinking, lean startup y liderazgo.</span></li>
+                                <li className="flex items-start gap-3"><div className="mt-2 w-1.5 h-1.5 rounded-full bg-[#00AEEF] flex-shrink-0"></div><span>Más de 15,000 emprendedores guiados por TrepCamp.</span></li>
                             </ul>
                         </motion.div>
                         <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="p-8 md:p-12 rounded-[2rem] md:rounded-[3.5rem] bg-[#4F1675] text-white space-y-6 md:space-y-8 shadow-2xl relative overflow-hidden">
@@ -516,8 +517,8 @@ const EmprenderParaAprender = () => {
                             <div className="inline-block p-3 md:p-4 rounded-2xl md:rounded-3xl bg-white/10 text-yellow-400 relative z-10"><Smile className="w-8 h-8 md:w-10 md:h-10" /></div>
                             <h2 className="text-3xl md:text-4xl font-black relative z-10">S - Satisfacción</h2>
                             <ul className="space-y-4 md:space-y-6 text-base md:text-xl opacity-90 font-medium relative z-10">
-                                <li className="flex items-start gap-3"><div className="mt-2 w-1.5 h-1.5 rounded-full bg-yellow-400 flex-shrink-0"></div><span>Próximos pasos claros para tu proyecto.</span></li>
-                                <li className="flex items-start gap-3"><div className="mt-2 w-1.5 h-1.5 rounded-full bg-yellow-400 flex-shrink-0"></div><span>Alianzas para tu desarrollo profesional.</span></li>
+                                <li className="flex items-start gap-3"><div className="mt-2 w-1.5 h-1.5 rounded-full bg-yellow-400 flex-shrink-0"></div><span>Jóvenes con próximos pasos claros.</span></li>
+                                <li className="flex items-start gap-3"><div className="mt-2 w-1.5 h-1.5 rounded-full bg-yellow-400 flex-shrink-0"></div><span>Instituciones aliadas para el desarrollo económico.</span></li>
                             </ul>
                         </motion.div>
                     </div>
@@ -530,15 +531,15 @@ const EmprenderParaAprender = () => {
                 <div className="container px-4">
                     <div className="text-center mb-10 md:mb-16">
                         <h2 className="text-3xl md:text-4xl font-black text-[#2D2B7A] mb-4 leading-tight">{t("Impacto y ODS", "Impact & SDG", language)}</h2>
-                        <p className="text-slate-600 font-medium max-w-2xl mx-auto text-sm md:text-base px-2">{t("Nuestras rutas alineadas a los Objetivos de la ONU.", "Our routes aligned with UN Goals.", language)}</p>
+                        <p className="text-slate-600 font-medium max-w-2xl mx-auto text-sm md:text-base px-2">{t("Nuestras rutas están alineadas a los Objetivos de Desarrollo Sostenible de la ONU.", "Our routes are aligned with the UN Sustainable Development Goals.", language)}</p>
                     </div>
                     <div className="flex flex-wrap justify-center gap-4 md:gap-10">
                         {[
-                            { n: "4", c: "bg-[#4C9F38]", t: t("Educación", "Education", language) },
-                            { n: "8", c: "bg-[#A21942]", t: t("Trabajo", "Work", language) },
-                            { n: "9", c: "bg-[#FD6925]", t: t("Innovación", "Innovation", language) },
-                            { n: "10", c: "bg-[#DD1367]", t: t("Reducción", "Reduced", language) },
-                            { n: "17", c: "bg-[#19486A]", t: t("Alianzas", "Partnerships", language) }
+                            { n: "4", c: "bg-[#4C9F38]", t: t("Educación de Calidad", "Quality Education", language) },
+                            { n: "8", c: "bg-[#A21942]", t: t("Trabajo Decente", "Decent Work", language) },
+                            { n: "9", c: "bg-[#FD6925]", t: t("Industria e Innovación", "Industry & Innovation", language) },
+                            { n: "10", c: "bg-[#DD1367]", t: t("Reducción de Desigualdades", "Reduced Inequalities", language) },
+                            { n: "17", c: "bg-[#19486A]", t: t("Alianzas para Lograr Objetivos", "Partnerships", language) }
                         ].map((o, i) => (
                             <motion.div
                                 key={i}
@@ -560,7 +561,7 @@ const EmprenderParaAprender = () => {
                             </div>
                             <div>
                                 <h4 className="font-black text-[#2D2B7A] text-sm md:text-base">{t("30-40 Jóvenes", "30-40 Youth", language)}</h4>
-                                <p className="text-[10px] md:text-sm text-slate-500 leading-tight">{t("Impacto directo en talento local.", "Direct impact on local talent.", language)}</p>
+                                <p className="text-[10px] md:text-sm text-slate-500 leading-tight">{t("Impacto directo en la formación de talento local.", "Direct impact on local talent training.", language)}</p>
                             </div>
                         </div>
                         <div className="p-6 md:p-8 rounded-[1.5rem] md:rounded-[2.5rem] bg-white shadow-lg border border-slate-100 flex items-center gap-4 md:gap-6">
@@ -568,8 +569,8 @@ const EmprenderParaAprender = () => {
                                 <Award className="w-6 h-6 md:w-8 md:h-8" />
                             </div>
                             <div>
-                                <h4 className="font-black text-[#2D2B7A] text-sm md:text-base">{t("Certificados", "Certified", language)}</h4>
-                                <p className="text-[10px] md:text-sm text-slate-500 leading-tight">{t("Reconocimiento oficial internacional.", "Official international recognition.", language)}</p>
+                                <h4 className="font-black text-[#2D2B7A] text-sm md:text-base">{t("100% Certificados", "100% Certified", language)}</h4>
+                                <p className="text-[10px] md:text-sm text-slate-500 leading-tight">{t("Reconocimiento oficial por CONEDU y TrepCamp.", "Official recognition by CONEDU and TrepCamp.", language)}</p>
                             </div>
                         </div>
                     </div>
@@ -588,10 +589,10 @@ const EmprenderParaAprender = () => {
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
                                 {[
-                                    { icon: MapPin, title: t("Lugar", "Location", language), desc: "Irapuato", sub: "Casa Emprendimiento", color: "text-purple-600", bg: "bg-purple-50" },
-                                    { icon: Clock, title: t("Horario", "Time", language), desc: "09:00 - 13:00 h", sub: t("Sáb 22 Feb (Tent)", "Sat Feb 22 (Tent)", language), color: "text-blue-600", bg: "bg-blue-50" },
-                                    { icon: DollarSign, title: t("Inversión", "Investment", language), desc: t("Gratuito", "Free", language), sub: t("Previo registro", "Upon registration", language), color: "text-green-600", bg: "bg-green-50" },
-                                    { icon: CheckCircle, title: t("Requisitos", "Requirements", language), desc: t("Ganas de aprender", "Willigness", language), sub: t("Traer laptop", "Bring laptop", language), color: "text-orange-600", bg: "bg-orange-50" }
+                                    { icon: MapPin, title: t("Lugar", "Location", language), desc: "Casa del Emprendimiento Irapuato", sub: "Calle Cortázar #64, Centro Histórico", color: "text-purple-600", bg: "bg-purple-50" },
+                                    { icon: Clock, title: t("Horario", "Time", language), desc: "09:00 - 13:00 h", sub: t("Sábado 22 de Febrero (Tentativo)", "Saturday Feb 22nd (Tentative)", language), color: "text-blue-600", bg: "bg-blue-50" },
+                                    { icon: DollarSign, title: t("Inversión", "Investment", language), desc: t("Gratuito", "Free of Charge", language), sub: t("Previo registro y selección", "Upon registration and selection", language), color: "text-green-600", bg: "bg-green-50" },
+                                    { icon: CheckCircle, title: t("Requisitos", "Requirements", language), desc: t("Ganas de aprender", "Willigness to learn", language), sub: t("Traer laptop o libreta", "Bring laptop or notebook", language), color: "text-orange-600", bg: "bg-orange-50" }
                                 ].map((item, i) => (
                                     <motion.div
                                         key={i}
@@ -632,7 +633,7 @@ const EmprenderParaAprender = () => {
                                 </div>
                                 <div className="pr-2 md:pr-4">
                                     <p className="text-[9px] md:text-xs font-black uppercase text-slate-400">{t("NOS VEMOS EN", "SEE YOU AT", language)}</p>
-                                    <p className="font-black text-[#2D2B7A] text-xs md:text-base">Irapuato</p>
+                                    <p className="font-black text-[#2D2B7A] text-xs md:text-base">Casa del Emprendimiento</p>
                                 </div>
                             </motion.div>
                         </div>
@@ -648,7 +649,7 @@ const EmprenderParaAprender = () => {
                 <div className="container px-4 relative z-10 text-center">
                     <div className="max-w-5xl mx-auto space-y-8 md:space-y-12">
                         <motion.div initial={{ scale: 0.9, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} className="bg-white/10 backdrop-blur-md p-8 md:p-12 rounded-[2.5rem] md:rounded-[4rem] border border-white/10 transition-all">
-                            <h2 className="text-xl md:text-5xl font-black leading-tight mb-6 md:mb-8 italic">"Creemos que las oportunidades no deben depender del código postal."</h2>
+                            <h2 className="text-xl md:text-5xl font-black leading-tight mb-6 md:mb-8 italic">"Creemos que las oportunidades para aprender, emprender y viajar a ecosistemas globales no deben depender del código postal ni del ingreso familiar."</h2>
                             <p className="text-sm md:text-xl text-blue-300 font-black uppercase tracking-[0.2em] md:tracking-[0.4em]">Declaración de Compromiso</p>
                         </motion.div>
                     </div>
