@@ -197,6 +197,19 @@ const achievements = [
 
 const upcomingEvents = [
     {
+        id: "community-day",
+        date: "Febrero 2026",
+        title: "Emprender para Aprender - Community Day",
+        description: "Un día intensivo para transformar tus ideas en acción y conectar con mentores de alto impacto en la Casa del Emprendimiento.",
+        location: "Irapuato, Guanajuato",
+        tags: ["Emprendimiento", "Irapuato", "Mentoria"],
+        gradient: "from-[#4F1675] via-[#7C3AED] to-[#E3B037]",
+        icon: Rocket,
+        status: "upcoming",
+        modality: "Presencial",
+        path: "/hackminds/emprender-para-aprender"
+    },
+    {
         id: "yes26",
         date: "Abril 2026",
         title: "YES26 - Youth Entrepreneurs Summit",
@@ -351,7 +364,7 @@ export default function Logros() {
                                 <div className="text-xs md:text-sm text-gray-300">Alianzas</div>
                             </div>
                             <div className="glass-effect-dark rounded-xl p-4">
-                                <div className="text-2xl md:text-3xl font-bold text-[#E3B037]">5</div>
+                                <div className="text-2xl md:text-3xl font-bold text-[#E3B037]">6</div>
                                 <div className="text-xs md:text-sm text-gray-300">Próximos Eventos</div>
                             </div>
                         </motion.div>
@@ -533,10 +546,19 @@ export default function Logros() {
                                                     </div>
                                                 )}
 
-                                                <button className={`w-full px-6 py-3 rounded-xl bg-gradient-to-r ${event.gradient} text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 mt-4`}>
-                                                    {event.status === 'upcoming' ? 'Más Información' : 'Ver Detalles'}
-                                                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                                                </button>
+                                                {event.path ? (
+                                                    <Link to={event.path} className="block w-full">
+                                                        <button className={`w-full px-6 py-3 rounded-xl bg-gradient-to-r ${event.gradient} text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 mt-4`}>
+                                                            {event.status === 'upcoming' ? 'Más Información' : 'Ver Detalles'}
+                                                            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                                        </button>
+                                                    </Link>
+                                                ) : (
+                                                    <button className={`w-full px-6 py-3 rounded-xl bg-gradient-to-r ${event.gradient} text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 mt-4`}>
+                                                        {event.status === 'upcoming' ? 'Más Información' : 'Ver Detalles'}
+                                                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                                                    </button>
+                                                )}
                                             </div>
                                         </div>
                                     </div>
