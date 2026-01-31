@@ -211,7 +211,7 @@ const EmprenderParaAprender = () => {
                     >
                         <div className="inline-block p-3 rounded-xl bg-purple-50 text-purple-700 font-bold tracking-wider text-[10px] md:text-xs uppercase">Visión y Propósito</div>
                         <h2 className="text-xl md:text-3xl font-medium text-slate-700 leading-relaxed px-2">
-                            "Queremos posicionar a <span className="text-[#2D2B7A] font-black">Guanajuato</span> como un referente en formación disruptiva de talento <span className="text-blue-600 font-black">STEAM</span> y emprendedor juvenil a nivel mundial..."
+                            "Queremos posicionar a <span className="text-[#2D2B7A] font-black">Guanajuato</span> como un referente en formación disruptiva de talento <span className="text-blue-600 font-black">STEAM</span> y emprendedor juvenil a nivel mundial, formando una comunidad de alto impacto y emprendedores que trascienden. Nuestra comunidad se fortalece en colaboración, desarrollo de soluciones a problemas reales y adaptada al contexto de startups en <span className="text-[#4F1675] font-black">LATAM</span>."
                         </h2>
                     </motion.div>
                 </div>
